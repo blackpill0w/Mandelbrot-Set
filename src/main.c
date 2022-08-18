@@ -9,11 +9,11 @@ const int     MAX_ITER = 255;
 const char*   COLOR_PALETTE[] = { // RGB
 	 "255 255 255",
 	 "0 0 0",
-	 "100 0 255",
-	 "60 60 60",
-	 "90 90 90",
-	 "130 130 130",
-	 "180 180 180",
+	 "180 0 255",
+	 "60 0 200",
+	 "255 255 255",
+	 "255 255 255",
+	 "255 255 255",
 };
 
 enum { BG = 0, BODY, L1, L2, L3, L4, L5 };
@@ -29,8 +29,8 @@ int main() {
 
 	for (double y=0; y < imgHeight; ++y) {
 		for (double x=0; x < imgWidth; ++x) {
-         double a = -2.5 + (x / imgWidth) * (1. - -2.5);
-         double b = -1.2 + (y / imgHeight) * (1.6 - -1.2);
+         double a = -2. + (x / imgWidth) * (1. - -2.);
+         double b = -1. + (y / imgHeight) * (1. - -1.);
 			double complex c = a + b*I;
          int iter = mandelbrot( c );
 
